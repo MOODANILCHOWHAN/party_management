@@ -20,7 +20,24 @@ mat-card {
   }
   
   mat-card-actions {
+    
     display: flex;
+    column-gap: 3rem;
     justify-content: flex-end;
+  }
+  .edit-btn{
+    background-color: rgb(7, 190, 241);
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
+    width: 2.5rem;
+    height: 2rem;
+  }
+  .delete-btn{
+    height: 2rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 0.4rem;
   }
   
