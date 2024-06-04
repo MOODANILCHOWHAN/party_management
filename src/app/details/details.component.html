@@ -1,0 +1,35 @@
+<app-home></app-home>
+<div class="container">
+<mat-card *ngIf="userDetails">
+    <mat-card-header>
+      <mat-card-title>{{ userDetails.name }}</mat-card-title>
+      <mat-card-subtitle>{{ userDetails.company_name }}</mat-card-subtitle>
+      <img *ngIf="userDetails.image" mat-card-image [src]="userDetails.image" alt="{{ userDetails.name }}">
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Mobile Number:</strong> {{ userDetails.mobile_no }}</p>
+      <p><strong>Telephone Number:</strong> {{userDetails.telephone_no }}</p>
+      <p><strong>WhatsApp Number:</strong> {{ userDetails.whatsapp_no }}</p>
+      <p><strong>Email:</strong> {{ userDetails.email }}</p>
+      <p><strong>Date of Birth:</strong> {{ userDetails.date_of_birth }}</p>
+      <p><strong>Anniversary Date:</strong> {{ userDetails.anniversary_date }}</p>
+      <p><strong>GSTIN:</strong> {{ userDetails.gstin }}</p>
+      <p><strong>PAN Number:</strong> {{ userDetails.pan_no }}</p>
+      <p><strong>Apply TDS:</strong> {{ userDetails.apply_tds }}</p>
+      <p><strong>Credit Limit:</strong> {{ userDetails.credit_limit }}</p>
+      <p><strong>Address:</strong> {{ userDetails.address }}</p>
+      <p><strong>Bank:</strong> {{ userDetails.bank_id }}</p>
+      <p><strong>Remark:</strong> {{ userDetails.remark }}</p>
+      <p><strong>Login Access:</strong> {{ userDetails.login_access }}</p>
+      <p><strong>Is Active:</strong> {{ userDetails.is_active }}</p>
+      <p><strong>User ID:</strong> {{ userDetails.userid.id }}</p>
+      <p><strong>User Active:</strong> {{ userDetails.userid.is_active }}</p>
+      <p><strong>User Permissions:</strong> {{ userDetails.userid.user_permissions }}</p>
+      <p><strong>Username:</strong> {{ userDetails.userid.username }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="edit(userDetails.id)">Edit</button>
+      <button mat-button (click)="deleteParty(userDetails.id)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div> 

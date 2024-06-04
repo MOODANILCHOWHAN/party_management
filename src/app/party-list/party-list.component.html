@@ -1,0 +1,27 @@
+<app-home></app-home>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Company Name</th>
+        <th>Mobile No</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let party of parties">
+        <td>{{ party.id }}</td>
+        <td>{{ party.name }}</td>
+        <td>{{ party.company_name }}</td>
+        <td>{{ party.mobile_no }}</td>
+        <td>{{ party.email }}</td>
+        <td style="display: flex; justify-content: space-around;">
+          <button (click)="edit(party.id)" class="btn">Edit</button>
+          <button (click)="deleteParty(party.id)" class="btn1">Delete</button>
+          <button (click)="details(party.id)" class="btn2">Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

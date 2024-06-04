@@ -1,0 +1,81 @@
+<!-- app.component.html -->
+<app-home></app-home>
+<mat-card>
+  <mat-card-title>Add party</mat-card-title>
+  <mat-card-content>
+  <div class="input-container">
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="formData.name">
+  </div>
+  <div class="input-container">
+    <label>Company Name:</label>
+    <input type="text" [(ngModel)]="formData.company_name">
+  </div>
+  <div class="input-container">
+    <label>Mobile Number:</label>
+    <input type="text" [(ngModel)]="formData.mobile_no">
+  </div>
+  <div class="input-container">
+    <label>Telephone Number:</label>
+    <input type="text" [(ngModel)]="formData.telephone_no">
+  </div>
+  <div class="input-container">
+    <label>WhatsApp Number:</label>
+    <input type="text" [(ngModel)]="formData.whatsapp_no">
+  </div>
+  <div class="input-container">
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="formData.email">
+  </div>
+  <div class="input-container">
+    <label>Remark:</label>
+    <input type="text" [(ngModel)]="formData.remark">
+  </div>
+  <div class="check-container">
+    <div><label>Login Access:</label> &nbsp;
+    <input type="checkbox" [(ngModel)]="formData.login_access"></div>
+   
+  </div>
+  <div class="input-container">
+    <label>Date of Birth:</label>
+    <input type="date" [(ngModel)]="formData.date_of_birth">
+  </div>
+  <div class="input-container">
+    <label>Anniversary Date:</label>
+    <input type="date" [(ngModel)]="formData.anniversary_date">
+  </div>
+  <div class="input-container">
+    <label>GSTIN:</label>
+    <input type="text" [(ngModel)]="formData.gstin">
+  </div>
+  <div class="input-container">
+    <label>PAN Number:</label>
+    <input type="text" [(ngModel)]="formData.pan_no">
+  </div>
+  <div class="check-container">
+    <label>Apply TDS:</label> &nbsp;
+    <input type="checkbox" [(ngModel)]="formData.apply_tds">
+  </div>
+  <div class="input-container">
+    <label>Credit Limit:</label>
+    <input type="number" [(ngModel)]="formData.credit_limit">
+  </div>
+  <div class="text-container">
+    <label>Address:</label>
+    <textarea [(ngModel)]="formData.address"></textarea>
+  </div>
+  <div class="text-container">
+    <label>Bank:</label>
+    <textarea [(ngModel)]="formData.bank"></textarea>
+  </div>
+  <div class="input-container">
+    <label>Image:</label>
+    <input type="file" (change)="onFileChange($event)">
+  </div>
+  <div class="input-container">
+    <button (click)="submitData()">Submit</button>
+  </div>
+  
+</mat-card-content>
+</mat-card>
+  
