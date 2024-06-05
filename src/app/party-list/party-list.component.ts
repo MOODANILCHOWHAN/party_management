@@ -17,10 +17,22 @@ export class PartyListComponent {
   // apiKey = 'Token 93142e878130fa22de95fb2c6a0c310a15224cca';
   constructor(private http: HttpClient,
               private party:PartyService,
-              private router:Router) { }
+              private router:Router) { 
+                if (!localStorage.getItem('token')) {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Error!',
+                    text: 'something went wrong. need to log in.'
+                  });
+                  this.router.navigate([''])
+                }
+              }
 
   ngOnInit(): void {
-    this.fetchPartyData();
+    setTimeout(()=>{
+      this.fetchPartyData();
+    },1000)
+    
   }
 
   fetchPartyData() {

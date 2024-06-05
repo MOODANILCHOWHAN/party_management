@@ -1,5 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,4 +16,5 @@ export class AppComponent {
     toggleSidenav() {
       this.sidenav.toggle();
     }
+    
 }
