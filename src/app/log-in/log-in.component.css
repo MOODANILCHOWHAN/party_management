@@ -24,7 +24,7 @@
     display: grid;
     row-gap:1rem;
     justify-content: center;
-    /* border:1px solid black */
+ 
   }
   .input-div{
     width: 100%;
