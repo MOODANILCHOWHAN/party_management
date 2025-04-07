@@ -26,6 +26,7 @@ import { AddPartyDetailsComponent } from './add-party-details/add-party-details.
 import { PartyListComponent } from './party-list/party-list.component';
 import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
+import { OneComponent } from './porfolio/one/one.component';
 // import { TockenInspectorService } from './tocken-inspector.service';
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { EditComponent } from './edit/edit.component';
     AddPartyDetailsComponent,
     PartyListComponent,
     DetailsComponent,
-    EditComponent
+    EditComponent,
+    OneComponent
   ],
   imports: [
     BrowserModule,

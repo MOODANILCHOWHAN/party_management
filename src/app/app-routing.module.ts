@@ -6,14 +6,16 @@ import { AddPartyDetailsComponent } from './add-party-details/add-party-details.
 import { PartyListComponent } from './party-list/party-list.component';
 import { DetailsComponent } from './details/details.component';
 import { EditComponent } from './edit/edit.component';
+import { OneComponent } from './porfolio/one/one.component';
 
 const routes: Routes = [
-  {path:'',component:LogInComponent},
+  {path:'11',component:LogInComponent},
   {path:'home',component:HomeComponent},
   {path:'partList',component:PartyListComponent},
   {path:'addparty',component:AddPartyDetailsComponent},
   {path:'details',component:DetailsComponent},
-  {path:'edit',component:EditComponent}
+  {path:'edit',component:EditComponent},
+  {path:'',component:OneComponent}
 ];
 
 @NgModule({

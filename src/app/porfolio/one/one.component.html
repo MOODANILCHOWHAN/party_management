@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="profile">
+        <div class="img-div">
+            <div>
+                <img src="assets/Dashboard Login.jpg">
+            </div>
+            <div class="slider-wrapper">
+                <div class="slider" [style.transform]="transformStyle">
+                    <img *ngFor="let image of images" [src]="image" alt="Image">
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Aparna Debnath</h1>
+            <h3>
+                Assistant Vice President at Barclays | Ex-JP Morgan | Mentored over 100 people | Break Into BA/PM with me
+            </h3>
+        </div>
+    </div>
+    <div class="details">
+        <div class="buttons-div">
+               <button *ngFor="let i of btns">{{i}}</button>
+        </div>
+    </div>
+</div>
+<!-- https://topmate.io/aparna_debnath -->
