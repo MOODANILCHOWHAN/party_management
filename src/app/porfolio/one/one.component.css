@@ -55,3 +55,23 @@
     gap: 1rem;
     padding: 1rem;
 }
+.edu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.edu-div{
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edu-div div:nth-child(2){
+    display: flex;
+   padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+}

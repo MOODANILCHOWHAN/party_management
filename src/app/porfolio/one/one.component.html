@@ -19,7 +19,45 @@
     </div>
     <div class="details">
         <div class="buttons-div">
-               <button *ngFor="let i of btns">{{i}}</button>
+               <button *ngFor="let i of btns" (click)="scrollToSection(i)">{{i}}</button>
+        </div>
+        <div #experiance>
+            <div>
+                <div>
+                    <img src="">
+                </div>
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div #project>
+            <span>project</span>
+        </div>
+        <div #education class="edu d-flex">
+           
+                <div *ngFor="let edu of educations" class="edu-div ">
+                <div>
+
+                </div>
+                <div>
+                    <span> Degree : {{edu.degree}}</span>
+                    <span>University : {{edu.university}}</span>
+                    <span >{{edu.degree == 'SSC'?'School':'Collage'}} : {{edu.collage}}</span>
+                    <span>{{edu.year}}</span>
+                    <span>CGPA : {{edu.cgpa}}</span>
+                </div>
+            </div>
+        </div>
+        <div #skills>
+            <span>skills</span>
+            <span>Back-end : Core and Adavance java, JDBC,Servlets, JSP, Spring and Spring Boot</span>
+            <span>Front-End : Html,Css, Java Script</span>
+            <span>Data Base : Oracle SQL, MySql</span>
+        </div>
+        <div #contact>
+            <span>contact</span>
         </div>
     </div>
 </div>
