@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-one',
@@ -11,6 +12,7 @@ export class OneComponent {
   @ViewChild('education') educationSection!:ElementRef;
   @ViewChild('skills') skillsSection!:ElementRef;
   @ViewChild('contact') contactSection !:ElementRef;
+  activeButton = "All";
   images = [
     'assets/Dashboard Login.jpg',
     'assets/Dashboard Login.jpg',
@@ -20,7 +22,7 @@ export class OneComponent {
     'assets/Dashboard Login.jpg'
   ];
   btns=[
-    'Experiance','Projects','Education','Skills','Contact'
+    'All','Experiance','Projects','Education','Skills','Contact'
   ]
   currentIndex = 0;
   transformStyle = 'translateX(0)';
@@ -51,6 +53,16 @@ export class OneComponent {
       cgpa:'8.6 CGPA'
     }
   ]
+
+  contact: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.contact = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      number: ['', Validators.required],
+      message: ['']
+    });
+  }
   ngOnInit(): void {
     this.startSlider();
   }
@@ -75,6 +87,7 @@ export class OneComponent {
   }
   
   scrollToSection(i: string) {
+    this.activeButton = i;
     switch (i) {
       case '1:1 Call':
         // Implement scrolling for '1:1 Call' here if needed
@@ -96,7 +109,16 @@ export class OneComponent {
         break;
     }
   }
-  
-  
+  showDetail:boolean=false;
+  showFeDetails:boolean=false;
+  hideDEtails(){
+    this.showDetail=false;
+  }
+  showDetails(){
+    this.showDetail=true
+  }
+  showFe(){
+    this.showFeDetails=!this.showFeDetails
+  }
 }
 

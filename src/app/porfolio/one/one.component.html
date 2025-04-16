@@ -19,46 +19,85 @@
     </div>
     <div class="details">
         <div class="buttons-div">
-               <button *ngFor="let i of btns" (click)="scrollToSection(i)">{{i}}</button>
+               <button *ngFor="let i of btns"  [class.active]="activeButton === i" (click)="scrollToSection(i)">{{i}}</button>
         </div>
-        <div #experiance>
-            <div>
-                <div>
-                    <img src="">
+        <div style="margin-top: 5rem;"></div>
+
+        <span class="tittle">Experiance</span>
+        <div #experiance style=" display: flex; justify-content: center;" >
+            <div class="ex-div">    
+                <div >
+                    <img src="assets/wipro.jpg">
                 </div>
                 <div>
-                    <span></span>
-                    <span></span>
+                    <span class="heading">Company : WIPRO</span>
+                    <span class="sub-head">ROLE : Mapping Specialist</span>
+                    <span>As part of Wipro's mapping team, I contributed to optimizing geographic data and mapping solutions. My responsibilities included analyzing spatial data, ensuring its accuracy, and collaborating with cross-functional teams to develop innovative mapping technologies. This role honed my skills in data interpretation, problem-solving, and leveraging cutting-edge tools to deliver efficient mapping solutions for diverse projects.</span>
                 </div>
             </div>
         </div>
         <div #project>
-            <span>project</span>
+            <span class="tittle">Project</span>
+            <br>
+            <div style=" display: flex; justify-content: center;" >
+            <div class="pro-div">
+                <span class="heading">E-Commerce website</span>
+                <div class="pro-details">
+                    <img src="" alt="img" style="width: 5rem;">
+                    <div>
+                        <span>This projet is designed for customer and Admin to handle shopping and management functionlity.</span><br>
+                        <span>In this project we have an user pannel where user can check out our products and Buy it. And Admin
+                            pannel to manage the all website like listing the products, orders and many more.</span><br>
+                        <span class="sub-head">Technology used :</span> <span> Html css, java Script for front end and java as backend, MySQL as database.</span>
+                    </div>
+                </div>
+            </div>
         </div>
+        </div>
+        <span class="tittle">Education : </span>
+        <br>
+        <br>
         <div #education class="edu d-flex">
            
                 <div *ngFor="let edu of educations" class="edu-div ">
                 <div>
-
+                    <img src="" alt="img">
                 </div>
                 <div>
-                    <span> Degree : {{edu.degree}}</span>
-                    <span>University : {{edu.university}}</span>
-                    <span >{{edu.degree == 'SSC'?'School':'Collage'}} : {{edu.collage}}</span>
-                    <span>{{edu.year}}</span>
-                    <span>CGPA : {{edu.cgpa}}</span>
+                    <span class="sub-head"> Degree : {{edu.degree}}</span>
+                    <span class="sub-head">University : {{edu.university}}</span>
+                    <span class="sub-head">{{edu.degree == 'SSC'?'School':'Collage'}} : {{edu.collage}}</span>
+                    <span class="sub-head">{{edu.year}}</span>
+                    <span class="sub-head">CGPA : {{edu.cgpa}}</span>
                 </div>
             </div>
         </div>
-        <div #skills>
-            <span>skills</span>
-            <span>Back-end : Core and Adavance java, JDBC,Servlets, JSP, Spring and Spring Boot</span>
-            <span>Front-End : Html,Css, Java Script</span>
-            <span>Data Base : Oracle SQL, MySql</span>
+        <br><br>
+        <span class="tittle">skills</span>
+        <br><br>
+        <div #skills class="skill-div">
+            
+            <div (mouseenter)="showDetails()" (mouseleave)="hideDEtails()">
+                <span *ngIf="!showDetail">Back End Technology</span>
+                <span *ngIf="showDetail"> Core and Adavance java, JDBC,Servlets, JSP, Spring and Spring Boot</span>
+            </div>
+            <div (mouseenter)="showFe()" (mouseleave)="showFe()">  
+                <span *ngIf="!showFeDetails">Front-End Technology</span> 
+                <span *ngIf="showFeDetails">Front-End : Html,Css, Java Script</span></div>
+            <div><span>Data Base : Oracle SQL, MySql</span></div>
         </div>
         <div #contact>
             <span>contact</span>
+            <!-- <div>
+               
+                <form [formGroup]="contact">
+                    <input type="text" placeholder="Name" formControlName="name" />
+                    <input type="email" placeholder="Email" formControlName="email" />
+                    <input type="number" placeholder="Number" formControlName="number" />
+                    <textarea formControlName="message" placeholder="Message"></textarea>
+                </form>
+                
+            </div> -->
         </div>
     </div>
 </div>
-<!-- https://topmate.io/aparna_debnath -->
