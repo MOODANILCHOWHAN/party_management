@@ -24,7 +24,7 @@
         <div style="margin-top: 5rem;"></div>
 
         <span class="tittle">Experiance</span>
-        <div #experiance style=" display: flex; justify-content: center;" >
+        <div #experiance style=" display: flex; " >
             <div class="ex-div">    
                 <div >
                     <img src="assets/wipro.jpg">
@@ -36,10 +36,10 @@
                 </div>
             </div>
         </div>
+        <span class="tittle">Project</span>
         <div #project>
-            <span class="tittle">Project</span>
-            <br>
-            <div style=" display: flex; justify-content: center;" >
+           
+            <div style=" display: flex; " >
             <div class="pro-div">
                 <span class="heading">E-Commerce website</span>
                 <div class="pro-details">
@@ -55,26 +55,22 @@
         </div>
         </div>
         <span class="tittle">Education : </span>
-        <br>
-        <br>
         <div #education class="edu d-flex">
            
                 <div *ngFor="let edu of educations" class="edu-div ">
-                <div>
-                    <img src="" alt="img">
+                    <div>
+                        <img src="" alt="img">
+                    </div>
+                    <div>
+                        <span class="sub-head"> Degree : {{edu.degree}}</span>
+                        <span class="sub-head">University : {{edu.university}}</span>
+                        <span class="sub-head">{{edu.degree == 'SSC'?'School':'Collage'}} : {{edu.collage}}</span>
+                        <span class="sub-head">{{edu.year}}</span>
+                        <span class="sub-head">CGPA : {{edu.cgpa}}</span>
+                    </div>
                 </div>
-                <div>
-                    <span class="sub-head"> Degree : {{edu.degree}}</span>
-                    <span class="sub-head">University : {{edu.university}}</span>
-                    <span class="sub-head">{{edu.degree == 'SSC'?'School':'Collage'}} : {{edu.collage}}</span>
-                    <span class="sub-head">{{edu.year}}</span>
-                    <span class="sub-head">CGPA : {{edu.cgpa}}</span>
-                </div>
-            </div>
         </div>
-        <br><br>
         <span class="tittle">skills</span>
-        <br><br>
         <div #skills class="skill-div">
             
             <div (mouseenter)="showDetails()" (mouseleave)="hideDEtails()">
